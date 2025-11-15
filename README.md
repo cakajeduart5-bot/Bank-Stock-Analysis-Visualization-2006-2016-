@@ -1,44 +1,43 @@
-# 📈 Bank Stock Analysis & Visualization (2006–2016)
+# Bank Stock Market Analysis
 
-## About
-This project performs an in-depth financial analysis on major U.S. bank stocks over a ten–year period (2006–2016). The analysis covers daily returns, volatility, correlations, rolling averages, and visual exploration of key financial events such as the 2008 market crash.
+## Overview
+This project explores 10 years of stock market data (2006–2016) from major U.S. banks.  
+It focuses on calculating daily returns, analyzing volatility, exploring correlations, and visualizing stock behaviour before, during, and after the 2008 financial crisis.
 
-The project uses **Pandas, NumPy, Matplotlib, Seaborn, and Plotly** to clean, analyze, and visualize stock market data.  
-All deprecated code from older notebooks (e.g., `.ix`) has been updated to modern Python standards.
-
----
-
-## Features
-- Importing multiple stock tickers using `yfinance`
-- MultiIndex DataFrames for OHLCV data
-- Daily return calculations
-- Best & worst single-day returns
-- Risk assessment and standard deviation
-- Correlation matrices & heatmaps
-- Rolling averages and trend analysis
-- Plotly-powered interactive charts
-- Optional candlestick, SMA, and Bollinger Band charts
+The project demonstrates practical use of Pandas, NumPy, Seaborn, Matplotlib, and yfinance for financial time-series analysis.
 
 ---
 
-## Visualizations
-- Line charts of closing prices  
-- Daily return plots  
-- 30–day rolling means  
-- Heatmaps of bank correlations  
-- Interactive Plotly charts  
-- Optional technical analysis plots  
+## What I Did
+- Collected historical stock data for BAC, JPM, WFC, C, MS, and GS  
+- Cleaned and structured the dataset using MultiIndex columns  
+- Calculated daily percentage returns  
+- Identified best and worst return days for each bank  
+- Analyzed volatility using standard deviation  
+- Created heatmaps and pairplots to study correlations  
+- Used rolling windows to explore moving averages  
+- Built clear visualizations to compare financial performance over time  
 
 ---
 
-## Technologies Used
+## Tools & Libraries
 - Python  
 - Pandas  
 - NumPy  
-- Seaborn  
 - Matplotlib  
-- Plotly  
+- Seaborn  
+- yfinance  
 
 ---
 
-## Project Structure
+## Skills Demonstrated
+- Time-series financial analytics  
+- Data wrangling and feature engineering  
+- MultiIndex DataFrame manipulation  
+- Trend analysis and volatility measurement  
+- Professional financial visualizations  
+
+---
+
+## Project Purpose
+To develop strong practical skills in financial data analysis and build professional-level visualizations, while gaining insight into how major banks behaved during real market conditions.
