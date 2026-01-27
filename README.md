@@ -1,46 +1,49 @@
 # **Financial Time-Series Analysis: The 2008 Banking Crisis**
-*A quantitative study of major U.S. bank stocks (BAC, JPM, GS, MS, C, WFC) to analyze market volatility, risk profiles, and sector correlation during the Great Recession.*
+*A quantitative study of major U.S. bank stocks (BAC, JPM, GS, MS, C, WFC) to analyze market volatility, risk profiles, and technical indicators during the Great Recession.*
 
 ---
 
 ## **Project Overview**
-[cite_start]This project explores 10 years of historical stock data (2006–2016) to audit the behavior of the "Big Six" banks during one of the most volatile periods in financial history[cite: 206, 210]. [cite_start]The goal was to demonstrate proficiency in handling high-frequency time-series data and extracting actionable risk metrics[cite: 206].
+This project explores 10 years of historical stock data (2006–2016) to audit the behavior of the "Big Six" banks. 
 
 ---
 
 ## **Financial EDA & Market Insights**
-[cite_start]Before modeling, I performed deep-dive analytics to identify structural trends in equity behavior[cite: 355].
+Before modeling, I performed deep-dive analytics to identify structural trends in equity behavior.
 
 ### **1. Long-Term Sector Trends**
 ![Bank Stock Trends](bank_stock_trends.png)
-[cite_start]Visualized the 10-year trajectory of Closing prices[cite: 720]. [cite_start]I specifically audited the "recovery" period post-2009 to observe how different institutional risk profiles influenced price action[cite: 210, 720].
+[cite_start]Visualized the 10-year trajectory of Closing prices for all six banks to observe the crash and subsequent recovery cycles[cite: 350, 723].
 
 ### **2. Volatility & Return Analysis**
 ![Returns Pairplot](returns_pairplot.png)
-[cite_start]Generated a pairplot of daily percentage returns to analyze the "tightness" of sector movement[cite: 415, 419]. 
-* [cite_start]**Observation:** The plot identifies significant outliers (specifically Citigroup), which I cross-referenced against historical events like the 2011 stock split[cite: 415, 551].
+[cite_start]Generated a pairplot of daily percentage returns to analyze the "tightness" of sector movement and identify high-risk outliers[cite: 419].
 
-### **3. Technical Analysis: BAC Moving Averages**
+---
+
+## **Technical Analysis: Bank of America (BAC)**
+[cite_start]I focused a technical audit specifically on **Bank of America** to demonstrate how professional indicators react to market volatility.
+
+### **3. 30-Day Moving Average**
 ![BAC Moving Average](bac_moving_avg.png)
-[cite_start]I focused a technical audit on Bank of America (BAC) during the 2008 crash, applying a 30-day rolling window to visualize the smoothing of high-volatility price action[cite: 814, 815, 819].
+[cite_start]Applied a 30-day rolling window to BAC's 2008 price action to visualize the smoothing of high-volatility trends during the crash[cite: 819].
 
-### **4. Sector Correlation & Clustering**
+### **4. Volatility Strategy: Bollinger Bands**
+![BAC Bollinger Bands](bac_bollinger_bands.png)
+[cite_start]Implemented Bollinger Bands for BAC (2015) to analyze price action relative to its 20-day standard deviation, showcasing an understanding of mean reversion and statistical ranges[cite: 1061, 1068].
+
+---
+
+## **5. Sector Correlation & Clustering**
 ![Bank Correlation Clustermap](bank_correlation_clustermap.png)
-[cite_start]Applied hierarchical clustering to correlation matrices of stock prices[cite: 952, 953].
-* [cite_start]**The Insight:** This revealed the mathematical proximity of specific banks (e.g., JPM and WFC) during market stress, demonstrating a "sector-wide" contagion effect[cite: 953].
+Applied hierarchical clustering to correlation matrices of stock prices. [cite_start]This revealed the mathematical proximity of specific banks during market stress, demonstrating a "sector-wide" contagion effect[cite: 953].
 
 ---
 
-## **Scientific Rigor & Logic**
-* [cite_start]**Event Correlation:** Identified Jan 20, 2009 (Inauguration Day) as a shared worst-return day for 4 major banks, proving how political macro-events drive market sentiment[cite: 531, 532].
-* [cite_start]**Risk Categorization:** Calculated standard deviations to classify the "riskiest" stocks, noting how Citigroup and Morgan Stanley displayed significantly higher volatility compared to peers in 2015[cite: 568, 570, 584, 595].
-
----
-
-## **Tools & Technical Skills**
-- [cite_start]**Python Libraries:** Pandas (MultiIndex), NumPy, Matplotlib, Seaborn[cite: 220, 221, 222, 223, 347, 418].
-- [cite_start]**Data Sourcing:** Utilized `yfinance` to programmatically download historical OHLCV data[cite: 226, 301].
-- [cite_start]**Financial Analytics:** Time-series wrangling, rolling windows, and percentage change modeling[cite: 381, 382, 815, 819].
+## **Key Takeaways**
+* **Scientific Rigor:** Identified Jan 20, 2009 (Inauguration Day) as a shared "worst-return" day, proving how macro-events drive market sentiment.
+* [cite_start]**Risk Categorization:** Calculated standard deviations to classify the "riskiest" stocks (Citigroup/Morgan Stanley) relative to the sector[cite: 568, 570].
+* [cite_start]**Data Integrity:** Sourced data programmatically via `yfinance` and handled complex MultiIndex DataFrames[cite: 226, 347].
 
 ---
 
