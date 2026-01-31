@@ -1,53 +1,54 @@
-# **Financial Time-Series Analysis: The 2008 Banking Crisis**
-*A quantitative study of major U.S. bank stocks (BAC, JPM, GS, MS, C, WFC) to analyze market volatility, risk profiles, and technical indicators during the Great Recession.*
+# Financial Time-Series Analysis: The 2008 Banking Crisis
+
+Analysis of historical stock price data for major U.S. banks (BAC, JPM, GS, MS, C, WFC) to study volatility, correlations, and technical indicators before, during, and after the 2008 financial crisis.
 
 ---
 
-## **Project Overview**
-This project explores 10 years of historical stock data (2006–2016) to audit the behavior of the "Big Six" banks. 
+## Project Overview
+In this project, I analyzed 10 years of daily stock price data (2006–2016) for the six largest U.S. banks to understand how the financial crisis affected the sector and how different institutions recovered over time.
 
 ---
 
-## **Financial EDA & Market Insights**
-Before modeling, I performed deep-dive analytics to identify structural trends in equity behavior.
+## Exploratory Data Analysis
+Before applying technical indicators, I explored long-term price behaviour and daily returns.
 
-### **1. Long-Term Sector Trends**
-![Bank Stock Trends](bank_stock_trends.png)
-Visualized the 10-year trajectory of Closing prices for all six banks to observe the crash and subsequent recovery cycles.
+### 1. Long-Term Price Trends
+![Bank Stock Trends](bank_stock_trends.png)  
+Plotted closing prices over a 10-year period to visualise the 2008 crash and compare recovery patterns across banks.
 
-### **2. Volatility & Return Analysis**
-![Returns Pairplot](returns_pairplot.png)
-Generated a pairplot of daily percentage returns to analyze the "tightness" of sector movement and identify high-risk outliers.
-
----
-
-## **Technical Analysis: Bank of America (BAC)**
-I focused a technical audit specifically on **Bank of America** to demonstrate how professional indicators react to market volatility.
-
-### **3. 30-Day Moving Average**
-![BAC Moving Average](bac_moving_avg.png)
-Applied a 30-day rolling window to BAC's 2008 price action to visualize the smoothing of high-volatility trends during the crash.
-
-### **4. Volatility Strategy: Bollinger Bands**
-![BAC Bollinger Bands](bac_bollinger_bands.png)
-Implemented Bollinger Bands for BAC (2015) to analyze price action relative to its 20-day standard deviation, showcasing an understanding of mean reversion and statistical ranges.
+### 2. Returns and Volatility
+![Returns Pairplot](returns_pairplot.png)  
+Analysed daily percentage returns to compare volatility levels and identify higher-risk stocks within the sector.
 
 ---
 
-## **5. Sector Correlation & Clustering**
-![Bank Correlation Clustermap](bank_correlation_clustermap.png)
-Applied hierarchical clustering to correlation matrices of stock prices. This revealed the mathematical proximity of specific banks during market stress, demonstrating a "sector-wide" contagion effect.
+## Technical Analysis: Bank of America (BAC)
+I used Bank of America as a case study to apply common technical indicators.
+
+### 3. 30-Day Moving Average
+![BAC Moving Average](bac_moving_avg.png)  
+Applied a 30-day rolling average to smooth short-term price fluctuations and highlight broader trends during periods of high volatility.
+
+### 4. Bollinger Bands
+![BAC Bollinger Bands](bac_bollinger_bands.png)  
+Used Bollinger Bands to examine how BAC’s price moved relative to its recent mean and standard deviation, highlighting periods of unusually high or low prices.
 
 ---
 
-## **Key Takeaways**
-* **Scientific Rigor:** Identified Jan 20, 2009 (Inauguration Day) as a shared "worst-return" day, proving how macro-events drive market sentiment.
-* **Risk Categorization:** Calculated standard deviations to classify the "riskiest" stocks (Citigroup/Morgan Stanley) relative to the sector.
-* **Data Integrity:** Sourced data programmatically via `yfinance` and handled complex MultiIndex DataFrames.
+## Correlation Analysis
+![Bank Correlation Clustermap](bank_correlation_clustermap.png)  
+Computed correlations between bank stocks and applied hierarchical clustering to show how closely the banks moved together during periods of market stress.
 
 ---
 
-## **How to Run**
+## Key Takeaways
+- Major banks experienced their worst daily returns around the peak of the financial crisis, demonstrating the impact of macroeconomic events on stock prices.
+- Citigroup and Morgan Stanley showed higher volatility compared to other banks in the dataset.
+- Financial data was sourced programmatically using `yfinance` and processed using pandas, including handling MultiIndex DataFrames.
+
+---
+
+## How to Run
 ```bash
 pip install pandas_datareader yfinance
 jupyter notebook "04-Finance Project.ipynb"
